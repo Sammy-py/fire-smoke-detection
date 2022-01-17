@@ -31,19 +31,14 @@ seaborn>=0.11.0
 # tensorflow>=2.4.1  # TFLite export
 # tensorflowjs>=3.9.0  # TF.js export
 
-# Extras --------------------------------------
-# albumentations>=1.0.3
-# Cython  # for pycocotools https://github.com/cocodataset/cocoapi/issues/172
-# pycocotools>=2.0  # COCO mAP
-# roboflow
-thop  # FLOPs computation
-
-
 
 !python detect.py --weights last.pt --img 640 --conf 0.25 --source data/images
 
 !python detect.py --weights last.pt --img 640 --conf 0.25 --source 0           = real time work
 !python detect.py --weights last.pt --img 640 --conf 0.25 --source example.mp4 = just videos (mp4,webm...)
 !python detect.py --weights last.pt --img 640 --conf 0.25 --source example.jpg = just image (jpg,png...)
-
+python detect.py --weights last.pt --img 640 --conf 0.25 --source fotos/1.jpg 
+or -----------------
+python detect.py --weights last.pt --img 640 --conf 0.25 --source 0  
+more fast python detect.py --weights last.pt --img 350 --conf 0.25 --source 0  #250, 300 ....
 if you want , you can use -- conf 0.50 (the best detect)
